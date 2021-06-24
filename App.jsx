@@ -1,9 +1,17 @@
 import React from 'react';
-export default class App extends React.Component {
- constructor(props) {
- super(props);
- }
- render() {
- return <h1>Hello to React</h1>;
- }
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Login from "./src/IT19135830/Login/Login";
+
+
+function App() {
+        return (
+        <div>
+                <Router>
+                        <Login/>
+                </Router>
+
+        </div>
+        )
 }
+
+export default App
