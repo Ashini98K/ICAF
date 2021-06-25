@@ -30,18 +30,28 @@ class Login extends Component {
                             {/*<AiOutlineMail/>*/}
                             {/*<Mail size={25} className='mailIcon'/>*/}
                             <input className='inputfield'
-                                placeholder='Enter Email here'
+                                   placeholder='Enter Email here'
                             >
                             </input>
                             {/*<Mail size={25}/>*/}
                             <input className='inputfield'
-                                   placeholder='Enter Email here'
+                                   placeholder='Enter Password here'
                             >
                             </input>
 
-                            <Button className ='loginbtn' style={{backgroundColor:'#341E71',borderRadius: '93px'}}>
-                                <span className='btnTxt'>LOGIN</span>
-                            </Button>
+                            <row className='d-flex justify-content-between'>
+
+                                <Col sm='4'></Col>
+
+                                <button className ='loginbtn'>
+                                    <span className='btnTxt'>REGISTER</span>
+                                </button>
+                                <button className ='loginbtn'>
+                                    <span className='btnTxt'>LOGIN</span>
+                                </button>
+
+
+                            </row>
 
                         </form>
                     </Col>
