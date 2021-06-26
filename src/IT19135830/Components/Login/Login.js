@@ -1,14 +1,13 @@
 import React,{Component} from 'react'
 import {Button,Col, Row} from "reactstrap";
-import LoginCss from '../Stylesheets/login.css'
+import LoginCss from '../../Stylesheets/login.css'
 // import {AiOutlineMail} from "react-icons/all";
 import {Mail} from 'react-feather';
-// import {login} from '../actions/auth';
-import {useDispatch} from "react-redux";
+import login from '../actions/auth'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 
-// import {Row} from "reactstrap";
+
 
 
 class Login extends Component {
@@ -21,18 +20,16 @@ class Login extends Component {
             password:""
         }
 
-        // const dispatch = useDispatch();
-
-
     }
 
 
-
-
-    onSubmit(e){
+    onSubmit(e) {
         e.preventDefault();
-        console.log(this.state);
-        //dispatch(login(this.state, history));
+        let loginForm = {
+            email: this.state.email,
+            password: this.state.password
+        }
+        console.log(loginForm);
     }
 
 
@@ -84,6 +81,7 @@ class Login extends Component {
                                    id='password'
                                    value={this.state.password}
                                    onChange={this.onChange}
+                                   type='password'
                             >
                             </input>
 
