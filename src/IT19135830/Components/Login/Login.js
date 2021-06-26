@@ -1,12 +1,10 @@
 import React,{Component} from 'react'
 import {Button,Col, Row} from "reactstrap";
+import axios from 'axios';
 import LoginCss from '../../Stylesheets/login.css'
-// import {AiOutlineMail} from "react-icons/all";
 import {Mail} from 'react-feather';
 import login from '../actions/auth'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
-
-
 
 
 
@@ -15,12 +13,15 @@ class Login extends Component {
         super(props);
         this.onSubmit= this.onSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.navigateResearcher = this.navigateResearcher.bind(this);
+        this.navigateAttendee= this.navigateAttendee.bind(this);
         this.state={
             email:"",
-            password:""
+            password:"",
         }
 
     }
+
 
 
     onSubmit(e) {
@@ -29,13 +30,47 @@ class Login extends Component {
             email: this.state.email,
             password: this.state.password
         }
-        console.log(loginForm);
+        // console.log(loginForm);
+
+        axios.post('http://localhost:5000/user/login', loginForm)
+            .then(response => {
+                alert('Login Successful');
+                console.log(response.data);
+
+                let userType = response.data.result.type;
+
+                if(userType == 'RESEARCHER'){
+                    this.navigateResearcher(e);
+                }
+                else if (userType == 'ATTENDEE'){
+                    this.navigateAttendee(e);
+                }
+
+
+                // this.navigate(e);
+
+            })
+            .catch(error => {
+                console.log(error.message);
+                alert('Invalid Login');
+            })
+    }
+
+
+    navigateResearcher (e){
+        window.location=('/sample');
+    }
+
+    navigateAttendee(e){
+        window.location=('/sample1');
     }
 
 
     onChange(e){
-        this.setState({[e.target.name]:e.target.value})
+        this.setState({[e.target.name]:e.target.value});
     }
+
+
 
 
     render(){
