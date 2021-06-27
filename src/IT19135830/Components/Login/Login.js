@@ -3,7 +3,7 @@ import {Button,Col, Row} from "reactstrap";
 import axios from 'axios';
 import LoginCss from '../../Stylesheets/login.css'
 import {Mail} from 'react-feather';
-import login from '../actions/auth'
+import login from '../actions/auth';
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 
