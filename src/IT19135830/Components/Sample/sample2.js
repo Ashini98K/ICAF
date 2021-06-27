@@ -11,7 +11,7 @@ import React,{Component} from 'react'
 // const dispatch = useDispatch();
 
 
-class sample extends Component {
+class sample1 extends Component {
     constructor(props) {
         super(props);
         // this.onSubmit= this.onSubmit.bind(this);
@@ -50,4 +50,4 @@ class sample extends Component {
 
 }
 
-export default sample
+export default sample1

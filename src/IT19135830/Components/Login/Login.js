@@ -35,15 +35,23 @@ class Login extends Component {
         axios.post('http://localhost:5000/user/login', loginForm)
             .then(response => {
                 alert('Login Successful');
-                console.log(response.data);
+                // console.log(response.data);
+                let data = response.data;
+                console.log(data);
+                // localStorage.setItem("Login message", response.data.message);
+                // localStorage.setItem("UserToken", response.data.token);
 
                 let userType = response.data.result.type;
 
                 if(userType == 'RESEARCHER'){
                     this.navigateResearcher(e);
+                    localStorage.setItem("Login message", response.data.message);
+                    localStorage.setItem("UserToken", response.data.token);
                 }
                 else if (userType == 'ATTENDEE'){
                     this.navigateAttendee(e);
+                    localStorage.setItem("Login message", response.data.message);
+                    localStorage.setItem("UserToken", response.data.token);
                 }
 
 
@@ -124,7 +132,7 @@ class Login extends Component {
 
                                 <Col sm='4'></Col>
 
-                                <button className ='loginbtn' type='submit'>
+                                <button className ='loginbtn' type='submit' >
                                     <span className='btnTxt'>REGISTER</span>
                                 </button>
                                 <button className ='loginbtn'>
