@@ -12,7 +12,7 @@ class navBar extends Component {
                 <nav className="navbar navbar-expand-lg navbar-light " style={{background: 'transparent',color: '#FFFFFF'}}>
                     <div className=" container-fluid">
                         <div className="collapse navbar-collapse d-flex justify-content-around">
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav navTitles">
                             <li className="nav-item">
                                 <a className="nav-link navbar-brand active" href="/" >
                                         Home
@@ -24,14 +24,14 @@ class navBar extends Component {
                                     <a className="nav-link dropdown-toggle navbar-brand" href="/home" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Key Speakers
                                     </a>
-                                    <ul className="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink" style={{background:'transparent',outlineColor:'transparent' }}>
+                                    <ul className="dropdown-menu navTitles" aria-labelledby="navbarDarkDropdownMenuLink" style={{background:'transparent',outlineColor:'transparent' }}>
                                         <li><a className="dropdown-item navbar-brand"  href="/researchers">Researchers</a></li>
                                         <li><a className="dropdown-item navbar-brand" href="/presenters">Workshop Presenters</a></li>
                                     </ul>
                                 </li>
                             </ul>
 
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav navTitles">
                                 <li className="nav-item">
                                     <a className="nav-link navbar-brand active" href="/user-login" >
                                         Agenda
@@ -39,7 +39,7 @@ class navBar extends Component {
                                 </li>
                             </ul>
 
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav navTitles">
                                 <li className="nav-item">
                                     <a className="nav-link navbar-brand active" href="/user-login" >
                                         Workshops
@@ -47,7 +47,7 @@ class navBar extends Component {
                                 </li>
                             </ul>
 
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav navTitles">
                                 <li className="nav-item">
                                     <a className="nav-link navbar-brand active" href="/user-login" >
                                         Research Titles
@@ -56,7 +56,7 @@ class navBar extends Component {
                             </ul>
 
 
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav navTitles">
                                 <li className="nav-item">
                                     <a className="nav-link navbar-brand active" href="/user-login" >
                                         Login
@@ -64,9 +64,9 @@ class navBar extends Component {
                                 </li>
                             </ul>
 
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav navTitles">
                             <li className="nav-item">
-                                <a className="nav-link navbar-brand active" href="/user-login" >
+                                <a className="nav-link navbar-brand active" href="/admin-login" >
                                         Register
                                     </a>
                                 </li>
