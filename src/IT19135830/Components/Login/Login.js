@@ -83,8 +83,7 @@ class Login extends Component {
 
     render(){
         return(
-            <div>
-
+            <div style={{paddingTop:'1rem'}}>
                 <Row>
                     <Col sm ='1'></Col>
                     <Col sm ='5'>
