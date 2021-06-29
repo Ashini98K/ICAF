@@ -16,7 +16,7 @@ class LandingPage extends Component {
   render() {
     return (
       <div className="bngImage">
-        <div style={{ backdropFilter: "blur(5px)" }}>
+        <div>
           <Row className="rowstyle">
             <Col sm="3"></Col>
             <Col className="logoBlock"></Col>

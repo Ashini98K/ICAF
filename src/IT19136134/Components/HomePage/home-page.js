@@ -10,33 +10,48 @@ class Homepage extends Component {
         <Row className="rowstyle">
           <Col sm="1"></Col>
           <Col>
-            <h1 className="homeTopic" style={{ fontFamily: "Poiret One" }}>
-              International Conference on
-            </h1>
+            <div className="divHomeImage">
+              <div style={{ backdropFilter: "blur(2px)" }}>
+                <h1
+                  className="homeTopic"
+                  style={{
+                    fontFamily: "Poiret One",
+                  }}
+                >
+                  International Conference on
+                </h1>
 
-            <h1 className="homeTopic" style={{ fontFamily: "Poiret One" }}>
-              Application Frameworks
-            </h1>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div
-                className="logoSliit"
-                style={{
-                  width: "200px",
-                  height: "200px",
-                }}
-              ></div>
+                <h1
+                  className="homeTopic"
+                  style={{
+                    fontFamily: "Poiret One",
+                  }}
+                >
+                  Application Frameworks
+                </h1>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <div
+                    className="logoSliit"
+                    style={{
+                      width: "200px",
+                      height: "200px",
+                    }}
+                  ></div>
+                </div>
+                <br></br>
+                <h4 className="homeDate">3rd, 4th and 5th November 2021</h4>
+                <h4 className="homesliit">
+                  Sri Lanka Institute of Information Technology
+                </h4>
+              </div>
             </div>
             <br></br>
-            <h4 className="homeDate">3rd, 4th and 5th November 2021</h4>
-            <h4 className="homesliit">
-              Sri Lanka Institute of Information Technology
-            </h4>
             <h6 className="aboutTopic">About Conference</h6>
             <p className="aboutParagragh ">
               The 1st International conference on Application Framework (ICAF)
@@ -50,7 +65,13 @@ class Homepage extends Component {
               output, networking opportunities to discuss innovative ideas, and
               initiate collaborative work.
             </p>
+            <br></br>
+            <div className="callsOpen">
+              <h4>Registrations are open for all now</h4>
+              <h4>On!!!</h4>
+            </div>
           </Col>
+
           <Col sm="1"></Col>
         </Row>
       </div>
