@@ -14,7 +14,7 @@ class navBar extends Component {
                         <div className="collapse navbar-collapse d-flex justify-content-around">
                             <ul className="navbar-nav navTitles">
                             <li className="nav-item">
-                                <a className="nav-link navbar-brand active" href="/" >
+                                <a className="nav-link navbar-brand active" href="/home-page" >
                                         Home
                                     </a>
                                 </li>
@@ -24,7 +24,7 @@ class navBar extends Component {
                                     <a className="nav-link dropdown-toggle navbar-brand" href="/home" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Key Speakers
                                     </a>
-                                    <ul className="dropdown-menu navTitles" aria-labelledby="navbarDarkDropdownMenuLink" style={{background:'transparent',outlineColor:'transparent' }}>
+                                    <ul className="dropdown-menu navTitles" aria-labelledby="navbarDarkDropdownMenuLink" style={{background:'white',outlineColor:'transparent' }}>
                                         <li><a className="dropdown-item navbar-brand"  href="/researchers">Researchers</a></li>
                                         <li><a className="dropdown-item navbar-brand" href="/presenters">Workshop Presenters</a></li>
                                     </ul>
@@ -66,7 +66,7 @@ class navBar extends Component {
 
                         <ul className="navbar-nav navTitles">
                             <li className="nav-item">
-                                <a className="nav-link navbar-brand active" href="/admin-login" >
+                                <a className="nav-link navbar-brand active" href="/register" >
                                         Register
                                     </a>
                                 </li>

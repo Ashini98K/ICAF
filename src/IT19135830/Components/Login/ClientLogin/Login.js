@@ -15,6 +15,7 @@ class Login extends Component {
         this.onChange = this.onChange.bind(this);
         this.navigateResearcher = this.navigateResearcher.bind(this);
         this.navigateAttendee= this.navigateAttendee.bind(this);
+        this.navigateToRegistration= this.navigateToRegistration.bind(this);
         this.state={
             email:"",
             password:"",
@@ -72,6 +73,11 @@ class Login extends Component {
     navigateAttendee(e){
         window.location=('/sample1');
     }
+
+    navigateToRegistration(e){
+        window.location = `/register`;
+    }
+
 
 
     onChange(e){
@@ -131,9 +137,13 @@ class Login extends Component {
 
                                 <Col sm='4'></Col>
 
-                                <button className ='loginbtn' type='submit' >
+
+                                    <a
+                                        href="/register"
+                                        className="loginbtn">
                                     <span className='btnTxt'>REGISTER</span>
-                                </button>
+                                    </a>
+
                                 <button className ='loginbtn'>
                                     <span className='btnTxt'>LOGIN</span>
                                 </button>

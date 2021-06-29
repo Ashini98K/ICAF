@@ -139,7 +139,7 @@ class Register extends Component {
                   <span className="btnTxt">Login</span>
                 </button> */}
                 <a
-                  href="#"
+                  href="/user-login"
                   className="loginbtn"
                   // onClick={() => {
                   //   this.handleClick;

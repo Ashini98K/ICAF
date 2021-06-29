@@ -31,8 +31,8 @@ class Presenters extends Component {
         return(
             <div>
                 <Row className='userRow'>
-                    <Col sm ='1'></Col>
-                    <Col sm ='10'>
+                    <Col sm ='2'></Col>
+                    <Col sm ='8'>
                         <h1 className='userTopic'>Workshop Presenters</h1>
                         {this.state.presenters.length > 0 && this.state.presenters.map((item, index) => (
                             <div key={index}>
@@ -48,7 +48,7 @@ class Presenters extends Component {
 
 
                     </Col>
-                    <Col sm ='1'></Col>
+                    <Col sm ='2'></Col>
                 </Row>
             </div>
         )
