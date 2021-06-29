@@ -4,7 +4,7 @@ import AddUserCss from '../../Stylesheets/add-user.css';
 import Dropdown from 'react-dropdown';
 import Select from 'react-select'
 import axios from 'axios'
-
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
  
 class EditBackPanelUser extends Component {
@@ -113,7 +113,18 @@ class EditBackPanelUser extends Component {
                 <Row>
                     <Col sm ='1'></Col>
                     <Col sm ='5'>
-                        <h1 className='topic'>Add User</h1>
+                        <h1 className='topic'>Edit User</h1>
+
+                        <diV>
+                        <Player
+                            autoplay
+                            loop
+                            src="https://assets7.lottiefiles.com/packages/lf20_kklehbnf.json"
+                            style={{ height: '600px', width: '600px' }}
+                        >
+                            <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+                        </Player>
+                        </diV>
                     </Col>
                     <Col sm='4' className='rightcontent'>
                    
@@ -126,6 +137,7 @@ class EditBackPanelUser extends Component {
                                 type = "text" 
                                 id = "name"
                                 name = "name"
+                                disabled
                                 value = { this.state.name }
                                 onChange = { this.onChange } 
                             >
@@ -136,6 +148,7 @@ class EditBackPanelUser extends Component {
                                    type = "text" 
                                     id = "userName"
                                     name = "userName"
+                                    disabled
                                     value = { this.state.userName }
                                     onChange = { this.onChange }
                             >
@@ -173,50 +186,69 @@ class EditBackPanelUser extends Component {
                             </input>
 
                              
+                            <Row>
+                                <Col sm='1'></Col>
+                                <Col sm='3'>
+                                    <div className="radio">
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                value="Reviewer"
+                                                checked={this.state.selectedOption === "Reviewer"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Reviewer
+                                        </label>
+                                    </div>
+                                </Col>
+                                <Col sm='3'>
+                                    <div className="radio">
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                value="Admin"
+                                                checked={this.state.selectedOption === "Admin"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Admin
+                                        </label>
+                                    </div>
+                                </Col>
+                                <Col sm='3'>
+                                    <div className="radio">
+                                        <label className="">
+                                            <input
+                                                type="radio"
+                                                value="Editor"
+                                                checked={this.state.selectedOption === "Editor"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Editor
+                                        </label>
+                                    </div>
+                                </Col>
 
-                            <div className="radio">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        value="Reviewer"
-                                        checked={this.state.selectedOption === "Reviewer"}
-                                        onChange={this.onValueChange}
-                                    />
-                                    Reviewer
-                                </label>
-                            </div>
-                            <div className="radio">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        value="Admin"
-                                        checked={this.state.selectedOption === "Admin"}
-                                        onChange={this.onValueChange}
-                                    />
-                                    Admin
-                                </label>
-                            </div>
-                            <div className="radio">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        value="Editor"
-                                        checked={this.state.selectedOption === "Editor"}
-                                        onChange={this.onValueChange}
-                                    />
-                                    Editor
-                                </label>
-                            </div>
+                            </Row>
                             
                             
+                            
+                            <Row>
+                                <Col sm='4'>
+                                    <Button className='submitbtn' style={{ backgroundColor: '#341E71', borderRadius: '93px' }}>
+                                        <span className='btnTxt'>Edit</span>
+                                    </Button>
 
-                            <Button className ='submitbtn' style={{backgroundColor:'#341E71',borderRadius: '93px'}}>
-                                <span className='btnTxt'>Submit</span>
-                            </Button>
+                                </Col>
 
-                            <Button className ='submitbtn' onClick={ this.onDeleteUser } style={{backgroundColor:'#341E71',borderRadius: '93px'}}>
-                                <span className='btnTxt'>Delete</span>
-                            </Button>
+
+                                <Col sm='4'>
+                                    <Button className='submitbtn' onClick={this.onDeleteUser} style={{ backgroundColor: '#341E71', borderRadius: '93px' }}>
+                                        <span className='btnTxt'>Delete</span>
+                                    </Button>
+
+                                </Col>
+                            </Row>
+
                        
                         </form>
                       

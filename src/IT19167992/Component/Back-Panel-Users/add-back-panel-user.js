@@ -4,6 +4,7 @@ import AddUserCss from '../../Stylesheets/add-user.css';
 import Dropdown from 'react-dropdown';
 import Select from 'react-select'
 import axios from 'axios'
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 class AddBackPanelUser extends Component {
     constructor(props) {
@@ -32,7 +33,8 @@ class AddBackPanelUser extends Component {
     }
     
     onChange(e) {
-        this.setState( { [e.target.name] : e.target.value })
+        this.setState( {
+             [e.target.name] : e.target.value })
     }
 
     onValueChange(event) {
@@ -78,6 +80,17 @@ class AddBackPanelUser extends Component {
                     <Col sm ='1'></Col>
                     <Col sm ='5'>
                         <h1 className='topic'>Add User</h1>
+                        <diV>
+                        <Player
+                            autoplay
+                            loop
+                            src="https://assets10.lottiefiles.com/packages/lf20_1z0fledt.json"
+                            style={{ height: '600px', width: '600px' }}
+                        >
+                            <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+                        </Player>
+                        </diV>
+                        
                     </Col>
                     <Col sm='4' className='rightcontent'>
                          
@@ -136,45 +149,65 @@ class AddBackPanelUser extends Component {
 
                              
 
-                            <div className="radio">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        value="Reviewer"
-                                        checked={this.state.selectedOption === "Reviewer"}
-                                        onChange={this.onValueChange}
-                                    />
-                                    Reviewer
-                                </label>
-                            </div>
-                            <div className="radio">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        value="Admin"
-                                        checked={this.state.selectedOption === "Admin"}
-                                        onChange={this.onValueChange}
-                                    />
-                                    Admin
-                                </label>
-                            </div>
-                            <div className="radio">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        value="Editor"
-                                        checked={this.state.selectedOption === "Editor"}
-                                        onChange={this.onValueChange}
-                                    />
-                                    Editor
-                                </label>
-                            </div>
-                            
-                         
+                            <Row>
+                                <Col sm='1'></Col>
+                                <Col sm='3'>
+                                    <div className="radio">
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                value="Reviewer"
+                                                checked={this.state.selectedOption === "Reviewer"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Reviewer
+                                        </label>
+                                    </div>
+                                </Col>
+                                <Col sm='3'>
+                                    <div className="radio">
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                value="Admin"
+                                                checked={this.state.selectedOption === "Admin"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Admin
+                                        </label>
+                                    </div>
+                                </Col>
+                                <Col sm='3'>
+                                    <div className="radio">
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                value="Editor"
+                                                checked={this.state.selectedOption === "Editor"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Editor
+                                        </label>
+                                    </div>
+                                </Col>
 
-                            <Button className ='submitbtn' style={{backgroundColor:'#341E71',borderRadius: '93px'}}>
-                                <span className='btnTxt'>Submit</span>
-                            </Button>
+                            </Row>
+                            <Row>
+                                <Col sm='4'>
+
+                                </Col>
+                                <Col sm='8'>
+                                <Button 
+                                        className='submitbtn' 
+                                        style={{ 
+                                            backgroundColor: '#341E71', 
+                                            borderRadius: '93px' 
+                                            }}>
+                                    <span className='btnTxt'>Submit</span>
+                                </Button>
+                                </Col>
+
+                            </Row>
 
                         </form>
                     </Col>
