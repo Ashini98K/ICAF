@@ -2,23 +2,24 @@ import React,{Component} from 'react'
 import {Button,Col, Row} from "reactstrap";
 import AddUserCss from '../../Stylesheets/add-user.css';
 import "react-datepicker/dist/react-datepicker.css";
-import TableDatePicker from './DatePicker'
-import TimePicker from 'react-bootstrap-time-picker';
+import { Player, Controls } from '@lottiefiles/react-lottie-player'; 
 import axios from 'axios';
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
-class AddAgenda extends Component {
+class EditAgenda extends Component {
     constructor(props) {
-        super(props); 
-        this.onSubmit = this.onSubmit.bind(this);
+        super(props);
         this.onChange = this.onChange.bind(this);
-        this.state = { 
+        this.onSubmit = this.onSubmit.bind(this);
+        this.onDeleteEvent=this.onDeleteEvent.bind(this);
+        this.state = {
+            eventId:'', 
             event : '',
             person:'',
             date:'',
             startingTime:  '',
             endingTime :'',
-            venue : ''
+            venue : '',
+            agendas :[]
            
     
          };
@@ -26,9 +27,42 @@ class AddAgenda extends Component {
          
     }
 
+    componentDidMount(){
+        const eventIdentification = this.props.location.state.eventId
+        console.log(eventIdentification)
+        this.setState ({ eventId : eventIdentification})
+ 
+        axios.get(`http://localhost:5000/agenda/${eventIdentification}`)
+        .then(response => {
+
+            console.log(response.data.data);
+       
+          console.log(this.state.agendas);
+       
+                 
+                this.setState ({    event :response.data.agendas.event,
+                                    person : response.data.agendas.person,
+                                    date : response.data.agendas.date,
+                                    startingTime : response.data.agendas.startingTime,
+                                    endingTime : response.data.agendas.endingTime,
+                                    venue : response.data.agendas.venue
+                })       
+               
+        })
+        .catch(error => {
+          alert(error.message)
+        })
+
+        
+        
+    }
+
+    
+    
+
     onSubmit(e){
         e.preventDefault();
-        let agenda = {
+        let agendas = {
             event : this.state.event,
             person : this.state.person,
             date : this.state.date,
@@ -36,11 +70,13 @@ class AddAgenda extends Component {
             endingTime : this.state.endingTime,
             venue : this.state.venue
 
-        }
-        console.log('Data to Send', agenda);
-        axios.post('http://localhost:5000/agenda/add',agenda)
+        };
+
+        console.log('Data to Send', agendas);
+        const eventIdentification = this.props.location.state.eventId
+        axios.put(`http://localhost:5000/agenda/edit/${eventIdentification}`, agendas)
         .then(response => {
-            alert('Data Successfully Inserted.')
+            alert('Data Successfully Updated.')
         })
         .catch(error => {
             console.log(error.message);
@@ -53,17 +89,30 @@ class AddAgenda extends Component {
     onChange(e) {
         this.setState( { [e.target.name] : e.target.value })
     }
+
+    onDeleteEvent(e){
+        const eventIdentification = this.props.location.state.eventId
+        axios.delete(`http://localhost:5000/agenda/delete/${eventIdentification}`)
+        .then(response => {
+            alert('Data Successfully Deleted.')
+        })
+        .catch(error => {
+            console.log(error.message);
+            alert(error.message)
+
+        })
+    }
       
      
 
     render(){
         return(
             <div>
-                
+
                 <Row>
                     <Col sm ='1'></Col>
                     <Col sm ='5'>
-                        <h1 className='topic'>Add Events To Agenda</h1>
+                        <h1 className='topic'>Edit Events in Agenda</h1>
                         <diV>
                         <Player
                             autoplay
@@ -84,6 +133,7 @@ class AddAgenda extends Component {
                                 type = 'text'
                                 id = "event"
                                 name = "event"
+                                disabled
                                 value = { this.state.event }
                                 onChange = { this.onChange } 
    
@@ -122,7 +172,7 @@ class AddAgenda extends Component {
    
                             >
                             </input>
-                            <label className='lbl'>Ending Time</label>
+                            <label className='lbl'>Time</label>
                             <input className='inputfield'
                                 placeholder='Ending Time'
                                 type = 'time'
@@ -133,7 +183,7 @@ class AddAgenda extends Component {
    
                             >
                             </input>
-                            <label className='lbl'>Venue</label>                           
+                            <label className='lbl'>Venue</label>                     
                             <input className='inputfield'
                                    placeholder='Venue'
                                    type = 'text'
@@ -146,16 +196,19 @@ class AddAgenda extends Component {
 
                             <Row>
                                 <Col sm='4'>
-                                    
-                                </Col>
-                                <Col sm='8'>
                                     <Button className='submitbtn' style={{ backgroundColor: '#341E71', borderRadius: '93px' }}>
-                                        <span className='btnTxt'>Submit</span>
+                                        <span className='btnTxt'>Edit</span>
                                     </Button>
                                 </Col>
+                                <Col sm='4'>
+                                    <Button className='submitbtn' onClick={this.onDeleteEvent} style={{ backgroundColor: '#341E71', borderRadius: '93px' }}>
+                                        <span className='btnTxt'>Delete</span>
+                                    </Button>
+
+                                </Col>
+
                             </Row>
                             
-
                         </form>
                     </Col>
                     <Col sm ='2'></Col>
@@ -166,4 +219,4 @@ class AddAgenda extends Component {
 
 }
 
-export default AddAgenda
+export default EditAgenda
