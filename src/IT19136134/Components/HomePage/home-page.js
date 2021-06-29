@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Col, Row } from "reactstrap";
 import home from "../../Stylesheets/homepage.css";
 import "@fontsource/poiret-one"; // Defaults to weight 400.
+import FooterPage from "../Footer/footer-page";
 
 class Homepage extends Component {
   render() {
@@ -74,6 +75,7 @@ class Homepage extends Component {
 
           <Col sm="1"></Col>
         </Row>
+        <FooterPage />
       </div>
     );
   }
