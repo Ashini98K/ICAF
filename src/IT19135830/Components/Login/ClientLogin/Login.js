@@ -22,6 +22,10 @@ class Login extends Component {
         }
 
     }
+    //
+    // componentDidMount(){
+    //     axios.get('http://localhost:5000)
+    // }
 
 
 
@@ -33,7 +37,7 @@ class Login extends Component {
         }
         // console.log(loginForm);
 
-        axios.post('http://localhost:5000/user/login', loginForm)
+        axios.post('http://localhost:5000/user/client-login', loginForm)
             .then(response => {
                 alert('Login Successful');
                 // console.log(response.data);
@@ -54,6 +58,7 @@ class Login extends Component {
                     localStorage.setItem("Login message", response.data.message);
                     localStorage.setItem("UserToken", response.data.token);
                 }
+
 
 
                 // this.navigate(e);
@@ -114,7 +119,7 @@ class Login extends Component {
                         <form onSubmit={this.onSubmit}>
                             {/*<AiOutlineMail/>*/}
                             {/*<Mail size={25} className='mailIcon'/>*/}
-                            <input className='inputfield'
+                            <input className='input_field'
                                    placeholder='Enter Email here'
                                    name='email'
                                    id='email'
@@ -123,7 +128,7 @@ class Login extends Component {
                             >
                             </input>
                             {/*<Mail size={25}/>*/}
-                            <input className='inputfield'
+                            <input className='input_field'
                                    placeholder='Enter Password here'
                                    name = 'password'
                                    id='password'
@@ -139,12 +144,13 @@ class Login extends Component {
 
 
                                     <a
+                                        style={{paddingTop:'1rem'}}
                                         href="/register"
-                                        className="loginbtn">
+                                        className="loginbutton">
                                     <span className='btnTxt'>REGISTER</span>
                                     </a>
 
-                                <button className ='loginbtn'>
+                                <button className ='loginbutton'>
                                     <span className='btnTxt'>LOGIN</span>
                                 </button>
 

@@ -9,6 +9,7 @@ class navBar extends Component {
     render(){
         return(
             <div>
+
                 <nav className="navbar navbar-expand-lg navbar-light " style={{background: 'transparent',color: '#FFFFFF'}}>
                     <div className=" container-fluid">
                         <div className="collapse navbar-collapse d-flex justify-content-around">

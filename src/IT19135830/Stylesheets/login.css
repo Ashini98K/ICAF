@@ -36,7 +36,7 @@
     text-align: right;
 }
 
-.inputfield{
+.input_field{
     width:60vh;
     height: 7vh;
     margin-top: 2rem;
@@ -48,7 +48,7 @@
     padding-left: 3rem;
 }
 
-.inputfield:hover{
+.input_field:hover{
     background: rgba(185, 172, 238, 0.63);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 60px;
@@ -63,12 +63,14 @@
 
 }
 
-.loginbtn{
+.loginbutton{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 93px;
     width: 175px;
     height: 55px;
     margin-top: 2vh;
+    text-align: center;
+    border-width: 0pt;
     text-align: center;
     /*margin-left: 22rem;*/
 
@@ -81,7 +83,7 @@
 
 }
 
-.loginbtn:hover {
+.loginbutton:hover {
     background: #341E71;
     color: #FFFFFF;
 }

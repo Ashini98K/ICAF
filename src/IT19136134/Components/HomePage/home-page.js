@@ -1,12 +1,20 @@
 import React, { Component } from "react";
+import { Route} from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import home from "../../Stylesheets/homepage.css";
 import "@fontsource/poiret-one"; // Defaults to weight 400.
+// import navbar from '../../../IT19135830/Components/ClientSideNavBar/navBar';
+import login from '../../../IT19135830/Components/Login/ClientLogin/Login'
+import navBar from "../../../IT19135830/Components/ClientSideNavBar/navBar";
+import {Route} from "react-router-dom";
+
 
 class Homepage extends Component {
   render() {
     return (
       <div>
+        <Route component={navBar}></Route>
+        <div>
         <Row className="rowstyle">
           <Col sm="1"></Col>
           <Col>
@@ -74,9 +82,10 @@ class Homepage extends Component {
 
           <Col sm="1"></Col>
         </Row>
+        </div>
       </div>
     );
   }
 }
 
-export default Homepage;
+export default Homepage
