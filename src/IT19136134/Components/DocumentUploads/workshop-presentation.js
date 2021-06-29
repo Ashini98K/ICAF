@@ -3,6 +3,8 @@ import { Col, Row } from "reactstrap";
 import Research from "../../Stylesheets/research.css";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import axios from "axios";
+import firebase from "./firebase";
+import FooterPage from "../Footer/footer-page";
 
 class WorkShopPresentationUpload extends Component {
   constructor(props) {
@@ -12,10 +14,12 @@ class WorkShopPresentationUpload extends Component {
       tittle: "",
       descritpion: "",
       document: null,
+      urlFile: "",
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onFileChange = this.onFileChange.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
 
   componentDidMount() {
@@ -31,14 +35,33 @@ class WorkShopPresentationUpload extends Component {
     // Update the state
     this.setState({ document: event.target.files[0] });
   };
+
+  handleSave = () => {
+    let bucketName = "documents";
+    let file = this.state.document;
+    let storageRef = firebase.storage().ref(`${bucketName}/${file.name}`);
+    let uploadTask = storageRef.put(file);
+    uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, () => {
+      let downloadURL = uploadTask.snapshot.downloadURL;
+      //this.setState.urlFile = downloadURL;
+      //console.log("URL :", this.state.urlFile);
+      storageRef.getDownloadURL().then((url) => {
+        this.setState({ urlFile: url });
+
+        console.log("Download:", this.state.urlFile);
+      });
+    });
+  };
+
   onSubmit(e) {
     e.preventDefault();
 
-    const presentation = new FormData();
-    presentation.append("userId", this.state.userId);
-    presentation.append("tittle", this.state.tittle);
-    presentation.append("description", this.state.descritpion);
-    presentation.append("document", this.state.document);
+    let presentation = {
+      userId: "60d764d68d4eaa2234244c48",
+      tittle: this.state.tittle,
+      description: this.state.descritpion,
+      document: this.state.urlFile,
+    };
 
     console.log(presentation);
     axios
@@ -81,7 +104,19 @@ class WorkShopPresentationUpload extends Component {
         <Row>
           <Col sm="1"></Col>
           <Col sm="7">
-            <form onSubmit={this.onSubmit} enctype="multipart/form-data">
+            <row className="d-flex justify-content-between">
+              <input
+                type="file"
+                className="researchfile"
+                onChange={this.onFileChange}
+                accept="application/vnd.ms-powerpoint , application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                required
+              ></input>
+              <button className="submitbtn" onClick={this.handleSave}>
+                Upload
+              </button>
+            </row>
+            <form onSubmit={this.onSubmit}>
               <input
                 className="researchInput"
                 placeholder="Tittle of the Presentation"
@@ -90,30 +125,30 @@ class WorkShopPresentationUpload extends Component {
                 onChange={this.onChange}
                 required
               ></input>
-              <textarea
-                className="researchtextarea"
-                placeholder="Brief Description"
-                name="descritpion"
-                value={this.state.descritpion}
-                onChange={this.onChange}
-                required
-              >
-                {this.state.descritpion}
-              </textarea>
               <row className="d-flex justify-content-between">
-                <Col></Col>
-                <input
-                  type="file"
-                  className="researchfile"
-                  accept="application/vnd.ms-powerpoint , application/vnd.openxmlformats-officedocument.presentationml.presentation"
-                  onChange={this.onFileChange}
+                <textarea
+                  className="researchtextarea"
+                  placeholder="Brief Description"
+                  name="descritpion"
+                  value={this.state.descritpion}
+                  onChange={this.onChange}
                   required
-                ></input>
-                <button className="submitbtn">Submit</button>
+                >
+                  {this.state.descritpion}
+                </textarea>
+
+                <button
+                  className="submitbtn"
+                  style={{ marginTop: "37vh", marginLeft: "3vh" }}
+                >
+                  Submit
+                </button>
               </row>
             </form>
           </Col>
         </Row>
+        <br></br>
+        <FooterPage></FooterPage>
       </div>
     );
   }

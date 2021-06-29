@@ -3,6 +3,7 @@ import { Col, Row } from "reactstrap";
 import RegisterCss from "../../Stylesheets/register.css";
 import axios from "axios";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import FooterPage from "../Footer/footer-page";
 
 const initialState = {
   id: "",
@@ -158,6 +159,7 @@ class Register extends Component {
             </form>
           </Col>
         </Row>
+        <FooterPage></FooterPage>
       </div>
     );
   }
