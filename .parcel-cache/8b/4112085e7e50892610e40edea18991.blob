@@ -1,0 +1,263 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactstrap = require("reactstrap");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+//import { Player, Controls } from "@lottiefiles/react-lottie-player";
+var _userTypeCss = require("../../Stylesheets/userType.css");
+var _userTypeCssDefault = parcelHelpers.interopDefault(_userTypeCss);
+class UserType extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: "",
+            type: ""
+        };
+        this.navigateToResearch = this.navigateToResearch.bind(this);
+        this.navigateWorkshop = this.navigateWorkshop.bind(this);
+        this.navigateToPayment = this.navigateToPayment.bind(this);
+        this.onSUbmit = this.onSUbmit.bind(this);
+    }
+    componentDidMount() {
+        this.state.id = this.props.match.params.id;
+        console.log("User ID :", this.state.id);
+    }
+    onSUbmit(e) {
+        e.preventDefault();
+        let userType = {
+            type: e.target.value
+        };
+        console.log(userType.type);
+        console.log(this.state.id);
+        _axiosDefault.default.put(`http://localhost:5000/user/update/${this.state.id}`, userType).then((response)=>{
+            console.log("User:", response.data);
+        }).catch((error)=>{
+            alert(error.message);
+        });
+        if (userType.type == "WORKSHOP PRESENTER") {
+            console.log(" workshopTrue");
+            this.navigateWorkshop(e, this.state.id);
+        } else if (userType.type == "RESEARCHER") {
+            this.navigateToResearch(e, this.state.id);
+            console.log("researcher true");
+        } else {
+            console.log("attendee true");
+            this.navigateToPayment(e, this.state.id);
+        }
+    }
+    navigateWorkshop(e, id) {
+        window.location = `/workshop-presentation/${id}`;
+    }
+    navigateToResearch(e, id) {
+        window.location = `/research-upload/${id}`;
+    }
+    navigateToPayment(e) {
+        window.location = `/payment-gateway/${id}`;
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 69
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 70
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 71
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "6",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 72
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "userTypeMainTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 73
+            },
+            __self: this
+        }, "What are you ?"))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 76
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 77
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "10",
+            className: "subTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 78
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 79
+            },
+            __self: this
+        }, "What you will be doing in this conference. Please select one of the below to continue")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 84
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("row", {
+            className: "d-flex justify-content-between",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 87
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "10",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 88
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "userButtonWorkshop",
+            value: "WORKSHOP PRESENTER",
+            onClick: this.onSUbmit,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 89
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "userButtonResearch",
+            value: "RESEARCHER",
+            onClick: this.onSUbmit,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 95
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "userButtonAttendee",
+            value: "ATTENDEE",
+            onClick: this.onSUbmit,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 101
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 108
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            className: "d-flex justify-content-between",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 110
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 111
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 112
+            },
+            __self: this
+        }, " ", /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "userLabel",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 114
+            },
+            __self: this
+        }, "Workshop presenter")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 116
+            },
+            __self: this
+        }, " ", /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "userLabel",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 118
+            },
+            __self: this
+        }, "Researcher")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 120
+            },
+            __self: this
+        }, " ", /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "userLabel",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 122
+            },
+            __self: this
+        }, "Attendee")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 124
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = UserType;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

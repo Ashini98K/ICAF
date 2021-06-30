@@ -1,0 +1,263 @@
+var helpers = require("../../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactstrap = require("reactstrap");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _loginCss = require("../../../Stylesheets/login.css");
+var _loginCssDefault = parcelHelpers.interopDefault(_loginCss);
+var _reactFeather = require("react-feather");
+var _auth = require("../../actions/auth");
+var _authDefault = parcelHelpers.interopDefault(_auth);
+var _reactLottiePlayer = require("@lottiefiles/react-lottie-player");
+class Login extends _react.Component {
+    constructor(props){
+        super(props);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.onChange = this.onChange.bind(this);
+        this.navigateResearcher = this.navigateResearcher.bind(this);
+        this.navigateAttendee = this.navigateAttendee.bind(this);
+        this.state = {
+            email: "",
+            password: ""
+        };
+    }
+    onSubmit(e) {
+        e.preventDefault();
+        let loginForm = {
+            email: this.state.email,
+            password: this.state.password
+        };
+        // console.log(loginForm);
+        _axiosDefault.default.post('http://localhost:5000/user/login', loginForm).then((response)=>{
+            alert('Login Successful');
+            // console.log(response.data);
+            let data = response.data;
+            console.log(data);
+            // localStorage.setItem("Login message", response.data.message);
+            // localStorage.setItem("UserToken", response.data.token);
+            let userType = response.data.result.type;
+            if (userType == 'RESEARCHER') {
+                this.navigateResearcher(e);
+                localStorage.setItem("Login message", response.data.message);
+                localStorage.setItem("UserToken", response.data.token);
+            } else if (userType == 'ATTENDEE') {
+                this.navigateAttendee(e);
+                localStorage.setItem("Login message", response.data.message);
+                localStorage.setItem("UserToken", response.data.token);
+            }
+        // this.navigate(e);
+        }).catch((error)=>{
+            console.log(error.message);
+            alert('Invalid Login');
+        });
+    }
+    navigateResearcher(e) {
+        window.location = '/sample';
+    }
+    navigateAttendee(e) {
+        window.location = '/sample1';
+    }
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            style: {
+                paddingTop: '1rem'
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 87
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 88
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "5",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 89
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "topic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 90
+            },
+            __self: this
+        }, "ICAF"), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            className: "subTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 91
+            },
+            __self: this
+        }, "International Conference on Application Frameworks"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 93
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Player, {
+            autoplay: true,
+            loop: true,
+            src: "https://assets4.lottiefiles.com/packages/lf20_jcikwtux.json",
+            style: {
+                height: '40rem',
+                width: '40rem',
+                paddingTop: '2rem',
+                paddingLeft: '2rem'
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 94
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Controls, {
+            visible: false,
+            buttons: [
+                'play',
+                'repeat',
+                'frame',
+                'debug'
+            ],
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 100
+            },
+            __self: this
+        })))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "4",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 105
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            className: "login",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 106
+            },
+            __self: this
+        }, "Login"), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            className: "instructions",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 107
+            },
+            __self: this
+        }, "Please enter Email and Password to login"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            onSubmit: this.onSubmit,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 108
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            className: "inputfield",
+            placeholder: "Enter Email here",
+            name: "email",
+            id: "email",
+            value: this.state.email,
+            onChange: this.onChange,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 111
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            className: "inputfield",
+            placeholder: "Enter Password here",
+            name: "password",
+            id: "password",
+            value: this.state.password,
+            onChange: this.onChange,
+            type: "password",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 120
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("row", {
+            className: "d-flex justify-content-between",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 130
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "4",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 132
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "loginbtn",
+            type: "submit",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 134
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "btnTxt",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 135
+            },
+            __self: this
+        }, "REGISTER")), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "loginbtn",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 137
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "btnTxt",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 138
+            },
+            __self: this
+        }, "LOGIN"))))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "2",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19135830\\Components\\Login\\ClientLogin\\Login.js",
+                lineNumber: 146
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = Login;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

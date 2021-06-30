@@ -1,0 +1,182 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactStripeCheckout = require("react-stripe-checkout");
+var _reactStripeCheckoutDefault = parcelHelpers.interopDefault(_reactStripeCheckout);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactstrap = require("reactstrap");
+var _paymentCss = require("../../Stylesheets/payment.css");
+var _paymentCssDefault = parcelHelpers.interopDefault(_paymentCss);
+var _oleoScriptSwashCaps = require("@fontsource/oleo-script-swash-caps");
+var _reactLottiePlayer = require("@lottiefiles/react-lottie-player");
+//function Payment() {
+class Payment extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: "",
+            type: ""
+        };
+        this.handleToken = this.handleToken.bind(this);
+    }
+    handleToken(token) {
+        console.log(token);
+        let details = {
+            amount: 5000,
+            id: token.id
+        };
+        _axiosDefault.default.post("http://localhost:5000/stripe/charge", details).then(()=>{
+            alert("Payment Success");
+        }).catch((error)=>{
+            alert(error);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 40
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 41
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 42
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "5",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 43
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            className: "paymentTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 44
+            },
+            __self: this
+        }, "Please make registration payment "), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "amountTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 45
+            },
+            __self: this
+        }, "Amount for attendee : Rs 5000 "), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "amountTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 46
+            },
+            __self: this
+        }, "Amount for researcher : Rs 8000 "), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            className: "mainTopic",
+            style: {
+                fontFamily: "Oleo Script Swash Caps"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 47
+            },
+            __self: this
+        }, "Stripe", " "), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 53
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 54
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 55
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 56
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactStripeCheckoutDefault.default, {
+            stripeKey: "pk_test_51IpQyrFF7EHqc9HHHj1TzKcpG7kg8uN8B7biD7xPeXFZjoi1vcHnKMnqYsW71Z0zqx8OrHeY9Sb4ju3Moj6GbDEt00V0DV3uW2",
+            token: handleToken,
+            className: "paybtn",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 57
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "4",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 64
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "imagestyle",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 65
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Player, {
+            autoplay: true,
+            loop: true,
+            src: "https://assets10.lottiefiles.com/packages/lf20_yzoqyyqf.json",
+            style: {
+                height: "610px",
+                width: "640px"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 66
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Controls, {
+            visible: false,
+            buttons: [
+                "play",
+                "repeat",
+                "frame",
+                "debug"
+            ],
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+                lineNumber: 72
+            },
+            __self: this
+        })))))));
+    }
+}
+exports.default = Payment;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

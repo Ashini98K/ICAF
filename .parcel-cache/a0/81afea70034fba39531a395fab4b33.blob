@@ -1,0 +1,140 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactstrap = require("reactstrap");
+var _landingpageCss = require("../../Stylesheets/landingpage.css");
+var _landingpageCssDefault = parcelHelpers.interopDefault(_landingpageCss);
+var _poiretOne = require("@fontsource/poiret-one"); // Defaults to weight 400.
+class LandingPage extends _react.Component {
+    constructor(props){
+        super(props);
+        this.navigateToHomePage = this.navigateToHomePage.bind(this);
+    }
+    navigateToHomePage(e) {
+        window.location = `/home-page`;
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "bngImage",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 18
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            style: {
+                backdropFilter: "blur(5px)"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 19
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            className: "rowstyle",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 20
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 21
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            className: "logoBlock",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 22
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 23
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 25
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 26
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 27
+            },
+            __self: this
+        }, " ", /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "headTopic",
+            style: {
+                fontFamily: "Poiret One"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 29
+            },
+            __self: this
+        }, "International Conference on Application Frameworks"), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "headDate",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 32
+            },
+            __self: this
+        }, "2021"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            style: {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 33
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "viewEvent",
+            onClick: (e)=>this.navigateToHomePage(e)
+            ,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 40
+            },
+            __self: this
+        }, "View Events"))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 48
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = LandingPage;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

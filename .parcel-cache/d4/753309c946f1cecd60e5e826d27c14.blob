@@ -1,0 +1,18 @@
+/* oleo-script-swash-caps-latin-ext-400-normal*/
+@font-face {
+  font-family: 'Oleo Script Swash Caps';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('f00a61b36cd4b9c86ae2c8ae42bee6cc') format('woff2'), url('214e1f32539a47c356461a0c8c18320b') format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* oleo-script-swash-caps-latin-400-normal*/
+@font-face {
+  font-family: 'Oleo Script Swash Caps';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('ea99289c790dce47303b82098d585e2f') format('woff2'), url('214e1f32539a47c356461a0c8c18320b') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

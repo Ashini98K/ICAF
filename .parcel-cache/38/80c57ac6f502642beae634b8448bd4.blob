@@ -1,0 +1,12 @@
+.bgcolor {
+    background-color: yellow;
+    background-size: fill;
+    position: absolute;
+    bottom: 0;
+    width: 100vh;
+    min-width: 100%;
+    height: 5vh;
+    color: yellow;
+    margin-right: 0%;
+    margin: 0;
+}

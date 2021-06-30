@@ -1,0 +1,36 @@
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.default = void 0;
+var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
+var _react = _interopRequireDefault(require("react"));
+var _reactDom = _interopRequireDefault(require("react-dom"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
+var _utils = require("./utils");
+var propTypes = {
+    children: _propTypes.default.node.isRequired,
+    node: _propTypes.default.any
+};
+var Portal1 = /*#__PURE__*/ function(_React$Component) {
+    _inheritsLoose2.default(Portal2, _React$Component);
+    function Portal2() {
+        return _React$Component.apply(this, arguments) || this;
+    }
+    var _proto = Portal2.prototype;
+    _proto.componentWillUnmount = function componentWillUnmount() {
+        if (this.defaultNode) document.body.removeChild(this.defaultNode);
+        this.defaultNode = null;
+    };
+    _proto.render = function render() {
+        if (!_utils.canUseDOM) return null;
+        if (!this.props.node && !this.defaultNode) {
+            this.defaultNode = document.createElement('div');
+            document.body.appendChild(this.defaultNode);
+        }
+        return(/*#__PURE__*/ _reactDom.default.createPortal(this.props.children, this.props.node || this.defaultNode));
+    };
+    return Portal2;
+}(_react.default.Component);
+Portal1.propTypes = propTypes;
+var _default = Portal1;
+exports.default = _default;

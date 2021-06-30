@@ -1,0 +1,268 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactstrap = require("reactstrap");
+var _registerCss = require("../../Stylesheets/register.css");
+var _registerCssDefault = parcelHelpers.interopDefault(_registerCss);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactLottiePlayer = require("@lottiefiles/react-lottie-player");
+const initialState = {
+    id: "",
+    fullName: "",
+    userName: "",
+    email: "",
+    contactNo: "",
+    password: "",
+    type: ""
+};
+class Register extends _react.Component {
+    constructor(props){
+        super(props);
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.navigateToUserType = this.navigateToUserType.bind(this);
+        this.state = initialState;
+    }
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    onSubmit(e) {
+        e.preventDefault();
+        let user = {
+            fullName: this.state.fullName,
+            userName: this.state.userName,
+            email: this.state.email,
+            contactNo: this.state.contactNo,
+            password: this.state.password,
+            type: this.state.type
+        };
+        console.log("User Data", user);
+        _axiosDefault.default.post("http://localhost:5000/user/create", user).then((response)=>{
+            console.log("Data :", response);
+            this.state.id = response.data.data._id;
+            console.log("UserID :", this.state.id);
+            alert("Registered successfully");
+            this.navigateToUserType(e, this.state.id);
+        }).catch((error)=>{
+            console.log(error.message);
+            alert("Please fill the required details");
+        });
+    }
+    navigateToUserType(e, id) {
+        console.log(id);
+        window.location = `/user-type/${id}`;
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 64
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 65
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 66
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "5",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 67
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "topic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 68
+            },
+            __self: this
+        }, "ICAF"), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            className: "subTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 69
+            },
+            __self: this
+        }, "International Conference on Application Frameworks"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "imagebackground",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 72
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Player, {
+            autoplay: true,
+            loop: true,
+            src: "https://assets4.lottiefiles.com/packages/lf20_u8o7BL.json",
+            style: {
+                height: "398px",
+                width: "600px"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 73
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Controls, {
+            visible: false,
+            buttons: [
+                "play",
+                "repeat",
+                "frame",
+                "debug"
+            ],
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 79
+            },
+            __self: this
+        })))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "5",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            className: "register",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 87
+            },
+            __self: this
+        }, "Register Now"), /*#__PURE__*/ _reactDefault.default.createElement("h6", {
+            className: "instructions",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 88
+            },
+            __self: this
+        }, "Please fill the following form and go through the guided registation"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            onSubmit: this.onSubmit,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 92
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            className: "inputfield",
+            placeholder: "Full Name",
+            name: "fullName",
+            value: this.state.fullName,
+            required: true,
+            onChange: this.onChange,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 93
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            className: "inputfield",
+            placeholder: "User Name",
+            name: "userName",
+            value: this.state.userName,
+            required: true,
+            onChange: this.onChange,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 101
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "email",
+            className: "inputfield",
+            placeholder: "Email",
+            name: "email",
+            value: this.state.email,
+            required: true,
+            onChange: this.onChange,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 109
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "number",
+            className: "inputfield",
+            placeholder: "Contact Number",
+            name: "contactNo",
+            value: this.state.contactNo,
+            required: true,
+            onChange: this.onChange,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 118
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            className: "inputfield",
+            placeholder: "Password",
+            name: "password",
+            value: this.state.password,
+            required: true,
+            onChange: this.onChange,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 127
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("row", {
+            className: "d-flex justify-content-between",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 136
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 137
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            href: "#",
+            className: "loginbtn",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 141
+            },
+            __self: this
+        }, "Login"), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "registerButton",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
+                lineNumber: 150
+            },
+            __self: this
+        }, "Register")))))));
+    }
+}
+exports.default = Register;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

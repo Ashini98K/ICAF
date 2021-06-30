@@ -1,0 +1,261 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactstrap = require("reactstrap");
+var _researchCss = require("../../Stylesheets/research.css");
+var _researchCssDefault = parcelHelpers.interopDefault(_researchCss);
+var _reactLottiePlayer = require("@lottiefiles/react-lottie-player");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _firebase = require("./firebase");
+var _firebaseDefault = parcelHelpers.interopDefault(_firebase);
+class ResearchUpload extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            userId: "",
+            tittle: "",
+            descritpion: "",
+            document: null,
+            urlFile: ""
+        };
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.onFileChange = this.onFileChange.bind(this);
+        this.handleSave = this.handleSave.bind(this);
+    }
+    componentDidMount() {
+        this.state.userId = this.props.match.params.id;
+        console.log("User ID :", this.state.userId);
+    }
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    onFileChange = (event)=>{
+        // Update the state
+        this.setState({
+            document: event.target.files[0]
+        });
+    };
+    handleSave = ()=>{
+        let bucketName = "documents";
+        let file = this.state.document;
+        let storageRef = _firebaseDefault.default.storage().ref(`${bucketName}/${file.name}`);
+        let uploadTask = storageRef.put(file);
+        uploadTask.on(_firebaseDefault.default.storage.TaskEvent.STATE_CHANGED, ()=>{
+            let downloadURL = uploadTask.snapshot.downloadURL;
+            //this.setState.urlFile = downloadURL;
+            //console.log("URL :", this.state.urlFile);
+            storageRef.getDownloadURL().then((url)=>{
+                this.setState({
+                    urlFile: url
+                });
+                console.log("Download:", this.state.urlFile);
+            });
+        });
+    };
+    onSubmit(e) {
+        e.preventDefault();
+        console.log("Document:", this.state.urlFile);
+        let research = {
+            userId: this.state.userId,
+            tittle: this.state.tittle,
+            description: this.state.descritpion,
+            document: this.state.urlFile
+        };
+        console.log(research);
+        _axiosDefault.default.post("http://localhost:5000/research/createresearch", research).then((response)=>{
+            console.log("Data :", response);
+            alert("Inserted successfully");
+        }).catch((error)=>{
+            console.log(error.message);
+            alert(error.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 83
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 84
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 85
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "2",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "imageStyle",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 87
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Player, {
+            autoplay: true,
+            loop: true,
+            src: "https://assets6.lottiefiles.com/packages/lf20_h59xofz0.json",
+            style: {
+                height: "160px",
+                width: "160px"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 88
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Controls, {
+            visible: false,
+            buttons: [
+                "play",
+                "repeat",
+                "frame",
+                "debug"
+            ],
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 94
+            },
+            __self: this
+        })))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "5",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 101
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "topic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 102
+            },
+            __self: this
+        }, "Researcher"))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 105
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 106
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "7",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 107
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("row", {
+            className: "d-flex justify-content-between",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 108
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "file",
+            className: "researchfile",
+            onChange: this.onFileChange,
+            accept: "application/pdf",
+            required: true,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 109
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "submitbtn",
+            onClick: this.handleSave,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 116
+            },
+            __self: this
+        }, "Upload")), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            onSubmit: this.onSubmit,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 120
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            className: "researchInput",
+            placeholder: "Tittle of the Research",
+            name: "tittle",
+            value: this.state.tittle,
+            onChange: this.onChange,
+            required: true,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 121
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("row", {
+            className: "d-flex justify-content-between",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 129
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            className: "researchtextarea",
+            placeholder: "Brief Description",
+            name: "descritpion",
+            value: this.state.descritpion,
+            onChange: this.onChange,
+            required: true,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 130
+            },
+            __self: this
+        }, this.state.descritpion), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "submitbtn",
+            style: {
+                marginTop: "35vh"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
+                lineNumber: 141
+            },
+            __self: this
+        }, "Submit")))))));
+    }
+}
+exports.default = ResearchUpload;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

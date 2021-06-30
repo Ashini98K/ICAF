@@ -1,0 +1,173 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactstrap = require("reactstrap");
+var _homepageCss = require("../../Stylesheets/homepage.css");
+var _homepageCssDefault = parcelHelpers.interopDefault(_homepageCss);
+var _poiretOne = require("@fontsource/poiret-one"); // Defaults to weight 400.
+class Homepage extends _react.Component {
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 9
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            className: "rowstyle",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 10
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 11
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 12
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "divHomeImage",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 13
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "homeTopic",
+            style: {
+                fontFamily: "Poiret One"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 14
+            },
+            __self: this
+        }, "International Conference on"), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "homeTopic",
+            style: {
+                fontFamily: "Poiret One"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 18
+            },
+            __self: this
+        }, "Application Frameworks"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            style: {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 21
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "logoSliit",
+            style: {
+                width: "200px",
+                height: "200px"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 28
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 36
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            className: "homeDate",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, "3rd, 4th and 5th November 2021"), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            className: "homesliit",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, "Sri Lanka Institute of Information Technology")), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 42
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h6", {
+            className: "aboutTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 43
+            },
+            __self: this
+        }, "About Conference"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "aboutParagragh ",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 44
+            },
+            __self: this
+        }, "The 1st International conference on Application Framework (ICAF) is organized by the Faculty of Computing of the Sri Lanka Institute of Information Technology (SLIIT) as an open forum for academics along with industry professionals to present the latest findings and research output. Primary objective of the ICAF is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work."), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 56
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "callsOpen",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 57
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 58
+            },
+            __self: this
+        }, "Registrations are open for all now"), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 59
+            },
+            __self: this
+        }, "On!!!"))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 63
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = Homepage;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,7 @@
+.bgcolor {
+    background-color: yellow;
+    bottom: 0;
+    width: 100vh;
+    height: 10pt;
+    color: yellow;
+}

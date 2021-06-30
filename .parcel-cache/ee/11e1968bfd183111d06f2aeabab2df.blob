@@ -1,0 +1,8 @@
+.bgcolor {
+    background-color: rgb(235, 195, 64);
+    background: yellow;
+    position: absolute;
+    bottom: 0;
+    width: 100vh;
+    height: 5vh;
+}

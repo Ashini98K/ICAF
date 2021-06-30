@@ -1,0 +1,602 @@
+.topic{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 114px;
+
+    padding-top: 3rem;
+}
+
+.subTopic{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.login{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+    text-align: right;
+
+    padding-top: 10rem;
+}
+
+.instructions{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.inputfield{
+    width:60vh;
+    height: 7vh;
+    margin-top: 2rem;
+    margin-left: 10rem;
+    top: 502px;
+    background: #EDEDED;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    padding-left: 3rem;
+}
+
+.inputfield:hover{
+    background: rgba(185, 172, 238, 0.63);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+}
+
+.mailIcon{
+    /*position: absolute;*/
+    width:60vh;
+    /*margin-top: 1rem;*/
+    /*margin-left: 10rem;*/
+    /*top: 502px;*/
+
+}
+
+.loginbtn{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 93px;
+    width: 175px;
+    height: 55px;
+    margin-top: 2vh;
+    text-align: center;
+    /*margin-left: 22rem;*/
+
+}
+
+.btnTxt{
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+.loginbtn:hover {
+    background: #341E71;
+    color: #FFFFFF;
+}
+
+.imgDiv{
+    height: 50vh;
+}
+
+
+.topic {
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 114px;
+    padding-top: 0pt;
+}
+
+.subTopic {
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.register {
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+    text-align: right;
+    padding-top: 7rem;
+}
+
+.instructions {
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.inputfield {
+    width: 60vh;
+    height: 7vh;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    top: 502px;
+    background: #EDEDED;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    padding-left: 2rem;
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    border-width: 0pt;
+    /* identical to box height */
+    text-align: left;
+    color: #2B2B2B;
+}
+
+.inputfield:hover {
+    background: rgba(185, 172, 238, 0.63);
+    color: #2B2B2B;
+}
+
+.mailIcon {
+    position: absolute;
+    left: 8.33%;
+    right: 8.33%;
+    top: 8.33%;
+    bottom: 8.33%;
+}
+
+.registerButton {
+    width: 150px;
+    height: 40px;
+    margin-top: 4vh;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 93px;
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    text-align: center;
+    border-width: 0pt;
+}
+
+.registerButton:hover {
+    background: #341E71;
+    color: #FFFFFF;
+}
+
+.loginbtn {
+    width: 150px;
+    height: 40px;
+    margin-top: 4vh;
+    font-family: Share;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    /* identical to box height */
+    text-align: center;
+    border-width: 0pt;
+}
+
+.loginbtn:hover {
+    color: #341E71;
+}
+
+.imagebackground {
+    width: 600px;
+    height: 395px;
+}
+.userTypeMainTopic {
+    font-family: Baloo Thambi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 111px;
+    color: #000000;
+}
+
+.subTopic {
+    font-family: Basic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    color: #898989;
+}
+
+.userButtonWorkshop {
+    width: 300px;
+    height: 300px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 5vh;
+    border: 5px solid rgba(191, 191, 191, 0.52);
+    background-image: url('https://media.giphy.com/media/DCMZYL14SScKmQrWjK/giphy.gif');
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.userButtonResearch {
+    width: 300px;
+    height: 300px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 5vh;
+    border: 5px solid rgba(191, 191, 191, 0.52);
+    background-image: url('https://media.giphy.com/media/26FPC5oAdfeFPkQQE/giphy.gif');
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.userButtonAttendee {
+    width: 300px;
+    height: 300px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 5vh;
+    border: 5px solid rgba(191, 191, 191, 0.52);
+    background-image: url('https://media.giphy.com/media/CHJuwLeJvKpp6wRirX/giphy.gif');
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.userLabel {
+    font-family: Basic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #000000;
+    margin-top: 6.5vh;
+    line-height: 150%;
+    margin-right: 40px;
+    display: block;
+    text-align: center;
+}
+.imageStyle {
+    width: 155px;
+    height: 155px;
+    margin-top: 2vh;
+    box-sizing: border-box;
+}
+
+.topic {
+    font-family: Baloo Thambi;
+    font-style: normal;
+    font-size: 72px;
+    line-height: 111px;
+    /* identical to box height */
+    color: #000000;
+    margin-left: 50px;
+    padding-top: 25pt;
+}
+
+.researchInput {
+    margin-top: 4vh;
+    width: 900px;
+    height: 50px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    color: #000000;
+    background: #EDEDED;
+    border-radius: 60px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-width: 0pt;
+}
+
+.researchtextarea {
+    margin-top: 4vh;
+    width: 900px;
+    height: 250px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 50px;
+    color: #000000;
+    background: #EBE8E8;
+    border-radius: 30px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-width: 0pt;
+}
+
+.researchfile {
+    margin-top: 5vh;
+    width: 500px;
+    height: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 39px;
+    color: #000000;
+    background: #EBE8E8;
+    border-radius: 60px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-width: 0pt;
+    margin-bottom: 3pt;
+}
+
+.submitbtn {
+    width: 150px;
+    height: 40px;
+    margin-top: 5vh;
+    margin-left: 25vh;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 93px;
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    text-align: center;
+    border-width: 0pt;
+}
+
+.submitbtn:hover {
+    background: #341E71;
+    color: #FFFFFF;
+}
+.paymentTopic {
+    padding-top: 50pt;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.amonutTopic {
+    padding-top: 45pt;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.mainTopic {
+    margin-top: 50pt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 90px;
+    color: #00A3FF;
+}
+
+.imagestyle {
+    width: 640px;
+    height: 620px;
+}
+
+.paybtn {
+    width: 200px;
+    height: 100px;
+    border-radius: 539px;
+}
+/* oleo-script-swash-caps-latin-ext-400-normal*/
+@font-face {
+  font-family: 'Oleo Script Swash Caps';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('oleo-script-swash-caps-latin-ext-400-normal.HASH_REF_4edd02f25bc8e58afda3c201431d0a48.woff2') format('woff2'), url('oleo-script-swash-caps-all-400-normal.HASH_REF_b9053c1317fb35ea43c6fc7af15a2681.woff') format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* oleo-script-swash-caps-latin-400-normal*/
+@font-face {
+  font-family: 'Oleo Script Swash Caps';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('oleo-script-swash-caps-latin-400-normal.HASH_REF_5d910ec5c237778547403e47bb5b385c.woff2') format('woff2'), url('oleo-script-swash-caps-all-400-normal.HASH_REF_b9053c1317fb35ea43c6fc7af15a2681.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.logoBlock {
+    background: url(sliitlogo.HASH_REF_a722f771c0039b9fc9e50b69660039c7.png) no-repeat center;
+    background-size: fill;
+    background-color: rgba(255, 255, 255, 0.47);
+    width: 150px;
+    height: 250px;
+    border-radius: 25px;
+    background-size: 550px 170px;
+}
+
+.bngImage {
+    background: url(conference_blur.HASH_REF_33916c33a6f8bfd60796ba822b1856e9.jpg) no-repeat center;
+    background-size: cover;
+    padding-right: 4vh;
+    width: 100vh;
+    height: 100vh;
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+}
+
+.rowstyle {
+    padding-top: 7vh;
+}
+
+.headTopic {
+    font-style: normal;
+    font-weight: 550;
+    font-size: 55px;
+    line-height: 75px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.headDate {
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 75px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.viewEvent {
+    background: rgba(44, 110, 148, 0.64);
+    border-radius: 63px;
+    width: 200px;
+    height: 55px;
+    font-family: Red Rose;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+/* poiret-one-cyrillic-400-normal*/
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('poiret-one-cyrillic-400-normal.HASH_REF_de7bcba5da003db25dd1c217dfe07ab4.woff2') format('woff2'), url('poiret-one-all-400-normal.HASH_REF_32605bf6ce4335a11e23f80984825ab2.woff') format('woff');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* poiret-one-latin-ext-400-normal*/
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('poiret-one-latin-ext-400-normal.HASH_REF_77faf20bd18fb79bf4f4d12da950236a.woff2') format('woff2'), url('poiret-one-all-400-normal.HASH_REF_32605bf6ce4335a11e23f80984825ab2.woff') format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* poiret-one-latin-400-normal*/
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('poiret-one-latin-400-normal.HASH_REF_c3544b4205e948244bad5cc673c23645.woff2') format('woff2'), url('poiret-one-all-400-normal.HASH_REF_32605bf6ce4335a11e23f80984825ab2.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.homeTopic {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 75px;
+    color: #FF7518;
+    text-align: center;
+}
+
+.homeDate {
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 75px;
+    color: white;
+    text-align: center;
+}
+
+.homesliit {
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 75px;
+    color: white;
+    text-align: center;
+}
+
+.rowstyle {
+    padding-top: 7vh;
+}
+
+.aboutTopic {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    color: orangered;
+    text-align: center;
+    font-size: 18px;
+}
+
+.aboutParagragh {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+}
+
+.logoSliit {
+    background: url(logo.HASH_REF_285083143970ce42edbca9edd72f857c.png) no-repeat center;
+    background-size: fill;
+    background-size: 200px 200px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.callsOpen {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.callsOpen:hover {
+    color: red
+}
+
+.divHomeImage {
+    background: url(homebk.HASH_REF_5d1d87a85ba89244b218f4e73cad59d6.jpg) no-repeat center;
+    background-size: cover;
+}
+.bgcolor {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25vh;
+    margin: 0;
+    padding-right: 0%;
+    padding-left: 0%;
+    left: 0;
+}
+
+.contactUs {
+    font-family: Poiret One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 42px;
+    color: white;
+}
+
+.divider {
+    border: 3px solid #0c50e2;
+}
+/*# sourceMappingURL=index.HASH_REF_f4c6ab3682a1e83c84a163ac4c3a389e.css.map */
