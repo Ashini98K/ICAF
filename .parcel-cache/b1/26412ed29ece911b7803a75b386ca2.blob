@@ -1,0 +1,24 @@
+"use strict";
+(function() {
+    if (typeof window !== 'object' || typeof window.CustomEvent === 'function') return;
+    var CustomEvent1 = function CustomEvent2(event, params) {
+        params = params || {
+            bubbles: false,
+            cancelable: false,
+            detail: null
+        };
+        var evt = document.createEvent('CustomEvent');
+        evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+        return evt;
+    };
+    window.CustomEvent = CustomEvent1;
+})();
+(function() {
+    if (typeof Object.values === 'function') return;
+    var values = function values1(O) {
+        return Object.keys(O).map(function(key) {
+            return O[key];
+        });
+    };
+    Object.values = values;
+})();
