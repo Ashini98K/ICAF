@@ -1,0 +1,111 @@
+import   "0d62314c2c7cba10d29f6fc0793ad2e1:react";
+import   "0d62314c2c7cba10d29f6fc0793ad2e1:reactstrap";
+import   "0d62314c2c7cba10d29f6fc0793ad2e1:axios";
+import   "0d62314c2c7cba10d29f6fc0793ad2e1:../../Stylesheets/userType.css";
+class $0d62314c2c7cba10d29f6fc0793ad2e1$var$UserType extends $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$ea71c44d9cb0d048 {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: "",
+            type: ""
+        };
+        this.navigateToResearch = this.navigateToResearch.bind(this);
+        this.navigateWorkshop = this.navigateWorkshop.bind(this);
+        this.navigateToPayment = this.navigateToPayment.bind(this);
+        this.onSUbmit = this.onSUbmit.bind(this);
+    }
+    componentDidMount() {
+        this.state.id = this.props.match.params.id;
+        console.log("User ID :", this.state.id);
+    }
+    onSUbmit(e) {
+        e.preventDefault();
+        let userType = {
+            type: e.target.value
+        };
+        console.log(userType.type);
+        console.log(this.state.id);
+        $0d62314c2c7cba10d29f6fc0793ad2e1$import$bed27987f94bc6dd$9099ad97b570f7c.put(`http://localhost:5000/user/update/${this.state.id}`, userType).then((response)=>{
+            console.log("User:", response.data);
+        }).catch((error)=>{
+            alert(error.message);
+        });
+        if (userType.type == "WORKSHOP PRESENTER") {
+            console.log(" workshopTrue");
+            this.navigateWorkshop(e, this.state.id);
+        } else if (userType.type == "RESEARCHER") {
+            this.navigateToResearch(e, this.state.id);
+            console.log("researcher true");
+        } else {
+            console.log("attendee true");
+            this.navigateToPayment(e, this.state.id);
+        }
+    }
+    navigateWorkshop(e, id) {
+        window.location = `/workshop-presentation/${id}`;
+    }
+    navigateToResearch(e, id) {
+        window.location = `/research-upload/${id}`;
+    }
+    navigateToPayment(e) {
+        window.location = `/payment-gateway/${id}`;
+    }
+    render() {
+        return(/*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", null, /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$237c4490e4f0617b, null, /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "6"
+        }, /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h1", {
+            className: "userTypeMainTopic"
+        }, "What are you ?"))), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$237c4490e4f0617b, null, /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "10",
+            className: "subTopic"
+        }, /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h3", null, "What you will be doing in this conference. Please select one of the below to continue")), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        })), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("row", {
+            className: "d-flex justify-content-between"
+        }, /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "10"
+        }, /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("button", {
+            type: "submit",
+            className: "userButtonWorkshop",
+            value: "WORKSHOP PRESENTER",
+            onClick: this.onSUbmit
+        }), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("button", {
+            type: "submit",
+            className: "userButtonResearch",
+            value: "RESEARCHER",
+            onClick: this.onSUbmit
+        }), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("button", {
+            type: "submit",
+            className: "userButtonAttendee",
+            value: "ATTENDEE",
+            onClick: this.onSUbmit
+        })), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        })), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$237c4490e4f0617b, {
+            className: "d-flex justify-content-between"
+        }, /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "3"
+        }, " ", /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("label", {
+            className: "userLabel"
+        }, "Workshop presenter")), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "3"
+        }, " ", /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("label", {
+            className: "userLabel"
+        }, "Researcher")), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "3"
+        }, " ", /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("label", {
+            className: "userLabel"
+        }, "Attendee")), /*#__PURE__*/ $0d62314c2c7cba10d29f6fc0793ad2e1$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($0d62314c2c7cba10d29f6fc0793ad2e1$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }))));
+    }
+}
+var $0d62314c2c7cba10d29f6fc0793ad2e1$export$9099ad97b570f7c = $0d62314c2c7cba10d29f6fc0793ad2e1$var$UserType;

@@ -1,0 +1,42 @@
+import   "5907cb5e6e9f4afbbc0377e3e4a4476c:react";
+import   "5907cb5e6e9f4afbbc0377e3e4a4476c:reactstrap";
+import   "5907cb5e6e9f4afbbc0377e3e4a4476c:../../Stylesheets/footer.css";
+class $5907cb5e6e9f4afbbc0377e3e4a4476c$var$FooterPage extends $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$ea71c44d9cb0d048 {
+    render() {
+        return(/*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", null, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$237c4490e4f0617b, null, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "0"
+        }), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "12",
+            className: "bgcolor"
+        }, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$237c4490e4f0617b, null, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, null, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h5", {
+            className: "contactUs"
+        }, "Contact Us"), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("hr", {
+            className: "divider"
+        })), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        })), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$237c4490e4f0617b, null, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "5"
+        }, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h5", {
+            className: "sliitheading"
+        }, "Sri Lanka Institue of Information technology, Faculty of computing"), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$237c4490e4f0617b, null, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "6"
+        }, /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("p", {
+            className: "paragraphs1"
+        }, "Telephone: +94 112076892", " ", /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("p", {
+            className: "paragraphs2"
+        }, "Email: info.icaf@sliit.lk"))))), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "3"
+        }), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            className: "footerLogo"
+        }), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }))), /*#__PURE__*/ $5907cb5e6e9f4afbbc0377e3e4a4476c$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($5907cb5e6e9f4afbbc0377e3e4a4476c$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "0"
+        }))));
+    }
+}
+var $5907cb5e6e9f4afbbc0377e3e4a4476c$export$9099ad97b570f7c = $5907cb5e6e9f4afbbc0377e3e4a4476c$var$FooterPage;

@@ -6,8 +6,9 @@
     "main": "index.js",
     "scripts": {
         "predeploy": "npm run build",
-        "deploy": "gh-pages -b master -d build ",
-        "start": "parcel index.html"
+        "deploy": "gh-pages -b main -d build ",
+        "start": "parcel index.html",
+        "build": "parcel index.html"
 
     },
     "author": "",

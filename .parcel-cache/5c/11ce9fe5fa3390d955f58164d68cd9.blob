@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <link href="70f978fcda3fad3d414596f306f75c06" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+         <link rel="icon" href="918c9015cad1b34c44bceb4585b4b2d9">
+          <title>ICAF</title>
+     </head>
+     <body>
+         <div id="app">
+            
+        </div>
+        <script src="0732c25c9045bf1c16e536d85fb50d6a"></script>
+        <script src="694d730b795f600f2a415f83b68a0973" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+     </body>
+</html>

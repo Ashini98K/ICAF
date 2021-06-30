@@ -1,0 +1,73 @@
+import   "7cdbc5a012c811ba9279acf4c0100c42:react";
+import   "7cdbc5a012c811ba9279acf4c0100c42:react-stripe-checkout";
+import   "7cdbc5a012c811ba9279acf4c0100c42:axios";
+import   "7cdbc5a012c811ba9279acf4c0100c42:reactstrap";
+import   "7cdbc5a012c811ba9279acf4c0100c42:../../Stylesheets/payment.css";
+import   "7cdbc5a012c811ba9279acf4c0100c42:@fontsource/oleo-script-swash-caps";
+import   "7cdbc5a012c811ba9279acf4c0100c42:@lottiefiles/react-lottie-player";
+//function Payment() {
+class $7cdbc5a012c811ba9279acf4c0100c42$var$Payment extends $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$ea71c44d9cb0d048 {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: "",
+            type: ""
+        };
+        this.handleToken = this.handleToken.bind(this);
+    }
+    handleToken(token) {
+        console.log(token);
+        let details = {
+            amount: 5000,
+            id: token.id
+        };
+        $7cdbc5a012c811ba9279acf4c0100c42$import$bed27987f94bc6dd$9099ad97b570f7c.post("http://localhost:5000/stripe/charge", details).then(()=>{
+            alert("Payment Success");
+        }).catch((error)=>{
+            alert(error);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", null, /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7cdbc5a012c811ba9279acf4c0100c42$import$56dcde213b6c1ca4$237c4490e4f0617b, null, /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7cdbc5a012c811ba9279acf4c0100c42$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7cdbc5a012c811ba9279acf4c0100c42$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "5"
+        }, /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h2", {
+            className: "paymentTopic"
+        }, "Please make registration payment "), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h5", {
+            className: "amountTopic"
+        }, "Amount for attendee : Rs 5000 "), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h5", {
+            className: "amountTopic"
+        }, "Amount for researcher : Rs 8000 "), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h3", {
+            className: "mainTopic",
+            style: {
+                fontFamily: "Oleo Script Swash Caps"
+            }
+        }, "Stripe", " "), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("br", null), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("br", null), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("br", null), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", null, /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7cdbc5a012c811ba9279acf4c0100c42$import$a4b5c60a95f00432$9099ad97b570f7c, {
+            stripeKey: "pk_test_51IpQyrFF7EHqc9HHHj1TzKcpG7kg8uN8B7biD7xPeXFZjoi1vcHnKMnqYsW71Z0zqx8OrHeY9Sb4ju3Moj6GbDEt00V0DV3uW2",
+            token: this.handleToken,
+            className: "paybtn"
+        }))), /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7cdbc5a012c811ba9279acf4c0100c42$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "4"
+        }, /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            className: "imagestyle"
+        }, /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7cdbc5a012c811ba9279acf4c0100c42$import$7d5e81ce66e30f42$271aa840ccfeca27, {
+            autoplay: true,
+            loop: true,
+            src: "https://assets10.lottiefiles.com/packages/lf20_yzoqyyqf.json",
+            style: {
+                height: "610px",
+                width: "640px"
+            }
+        }, /*#__PURE__*/ $7cdbc5a012c811ba9279acf4c0100c42$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7cdbc5a012c811ba9279acf4c0100c42$import$7d5e81ce66e30f42$5fc7ca40027d732f, {
+            visible: false,
+            buttons: [
+                "play",
+                "repeat",
+                "frame",
+                "debug"
+            ]
+        })))))));
+    }
+}
+var $7cdbc5a012c811ba9279acf4c0100c42$export$9099ad97b570f7c = $7cdbc5a012c811ba9279acf4c0100c42$var$Payment;

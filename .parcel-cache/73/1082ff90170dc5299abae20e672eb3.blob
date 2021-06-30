@@ -1,0 +1,4 @@
+import   "7d765f36d6e21b9a23cbc7539b595055:react";
+import   "7d765f36d6e21b9a23cbc7539b595055:react-dom";
+import   "7d765f36d6e21b9a23cbc7539b595055:./App";
+$7d765f36d6e21b9a23cbc7539b595055$import$9c1aa63963514e3e$792a797b69be0d58(/*#__PURE__*/ $7d765f36d6e21b9a23cbc7539b595055$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7d765f36d6e21b9a23cbc7539b595055$import$61d22e895c1525a2$9099ad97b570f7c, null), document.getElementById('app'));

@@ -1,0 +1,76 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _login = require("./src/IT19135830/Components/Login/ClientLogin/Login");
+var _loginDefault = parcelHelpers.interopDefault(_login);
+var _register = require("./src/IT19136134/Components/Register/register");
+var _registerDefault = parcelHelpers.interopDefault(_register);
+var _userType = require("./src/IT19136134/Components/Register/user-type");
+var _userTypeDefault = parcelHelpers.interopDefault(_userType);
+var _research = require("./src/IT19136134/Components/DocumentUploads/research");
+var _researchDefault = parcelHelpers.interopDefault(_research);
+var _workshopPresentation = require("./src/IT19136134/Components/DocumentUploads/workshop-presentation");
+var _workshopPresentationDefault = parcelHelpers.interopDefault(_workshopPresentation);
+var _payment = require("./src/IT19136134/Components/Payment/payment");
+var _paymentDefault = parcelHelpers.interopDefault(_payment);
+var _landingPage = require("./src/IT19136134/Components/LandingPage/landing-page");
+var _landingPageDefault = parcelHelpers.interopDefault(_landingPage);
+var _homePage = require("./src/IT19136134/Components/HomePage/home-page");
+var _homePageDefault = parcelHelpers.interopDefault(_homePage);
+var _footerPage = require("./src/IT19136134/Components/Footer/footer-page");
+var _footerPageDefault = parcelHelpers.interopDefault(_footerPage);
+function App() {
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\ICAF_Deployed\\AF_Project_Frontend\\App.jsx",
+            lineNumber: 15
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\ICAF_Deployed\\AF_Project_Frontend\\App.jsx",
+            lineNumber: 16
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\ICAF_Deployed\\AF_Project_Frontend\\App.jsx",
+            lineNumber: 18
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/home-page",
+        component: _homePageDefault.default,
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\ICAF_Deployed\\AF_Project_Frontend\\App.jsx",
+            lineNumber: 27
+        },
+        __self: this
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/",
+        component: _landingPageDefault.default,
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\ICAF_Deployed\\AF_Project_Frontend\\App.jsx",
+            lineNumber: 28
+        },
+        __self: this
+    })))));
+}
+_c = App;
+exports.default = App;
+var _c;
+$RefreshReg$(_c, "App");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

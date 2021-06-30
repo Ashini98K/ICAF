@@ -1,0 +1,47 @@
+import   "7b6012a6689399c367de75f64174eda4:react";
+import   "7b6012a6689399c367de75f64174eda4:reactstrap";
+import   "7b6012a6689399c367de75f64174eda4:../../Stylesheets/landingpage.css";
+import   "7b6012a6689399c367de75f64174eda4:@fontsource/poiret-one";
+class $7b6012a6689399c367de75f64174eda4$var$LandingPage extends $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$ea71c44d9cb0d048 {
+    constructor(props){
+        super(props);
+        this.navigateToHomePage = this.navigateToHomePage.bind(this);
+    }
+    navigateToHomePage(e) {
+        window.location = `/home-page`;
+    }
+    render() {
+        return(/*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            className: "bngImage"
+        }, /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", null, /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7b6012a6689399c367de75f64174eda4$import$56dcde213b6c1ca4$237c4490e4f0617b, {
+            className: "rowstyle"
+        }, /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7b6012a6689399c367de75f64174eda4$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "3"
+        }), /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7b6012a6689399c367de75f64174eda4$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            className: "logoBlock"
+        }), /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7b6012a6689399c367de75f64174eda4$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "3"
+        })), /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7b6012a6689399c367de75f64174eda4$import$56dcde213b6c1ca4$237c4490e4f0617b, null, /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7b6012a6689399c367de75f64174eda4$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "3"
+        }), /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7b6012a6689399c367de75f64174eda4$import$56dcde213b6c1ca4$b9b876919c0450e8, null, " ", /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h1", {
+            className: "headTopic",
+            style: {
+                fontFamily: "Poiret One"
+            }
+        }, "International Conference on Application Frameworks"), /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h1", {
+            className: "headDate"
+        }, "2021"), /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            style: {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }
+        }, /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("button", {
+            className: "viewEvent",
+            onClick: (e)=>this.navigateToHomePage(e)
+        }, "View Events"))), /*#__PURE__*/ $7b6012a6689399c367de75f64174eda4$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($7b6012a6689399c367de75f64174eda4$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "3"
+        })))));
+    }
+}
+var $7b6012a6689399c367de75f64174eda4$export$9099ad97b570f7c = $7b6012a6689399c367de75f64174eda4$var$LandingPage;

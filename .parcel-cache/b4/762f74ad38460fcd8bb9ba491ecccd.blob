@@ -1,0 +1,55 @@
+import   "f71b5cdd3ef70e92b2d78850f420984d:react";
+import   "f71b5cdd3ef70e92b2d78850f420984d:reactstrap";
+import   "f71b5cdd3ef70e92b2d78850f420984d:../../Stylesheets/homepage.css";
+import   "f71b5cdd3ef70e92b2d78850f420984d:@fontsource/poiret-one";
+import   "f71b5cdd3ef70e92b2d78850f420984d:../Footer/footer-page";
+class $f71b5cdd3ef70e92b2d78850f420984d$var$Homepage extends $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$ea71c44d9cb0d048 {
+    render() {
+        return(/*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", null, /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($f71b5cdd3ef70e92b2d78850f420984d$import$56dcde213b6c1ca4$237c4490e4f0617b, {
+            className: "rowstyle"
+        }, /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($f71b5cdd3ef70e92b2d78850f420984d$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        }), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($f71b5cdd3ef70e92b2d78850f420984d$import$56dcde213b6c1ca4$b9b876919c0450e8, null, /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            className: "divHomeImage"
+        }, /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            style: {
+                backdropFilter: "blur(2px)"
+            }
+        }, /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h1", {
+            className: "homeTopic",
+            style: {
+                fontFamily: "Poiret One"
+            }
+        }, "International Conference on"), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h1", {
+            className: "homeTopic",
+            style: {
+                fontFamily: "Poiret One"
+            }
+        }, "Application Frameworks"), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            style: {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }
+        }, /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            className: "logoSliit",
+            style: {
+                width: "200px",
+                height: "200px"
+            }
+        })), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("br", null), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h4", {
+            className: "homeDate"
+        }, "3rd, 4th and 5th November 2021"), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h4", {
+            className: "homesliit"
+        }, "Sri Lanka Institute of Information Technology"))), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("br", null), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h6", {
+            className: "aboutTopic"
+        }, "About Conference"), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("p", {
+            className: "aboutParagragh "
+        }, "The 1st International conference on Application Framework (ICAF) is organized by the Faculty of Computing of the Sri Lanka Institute of Information Technology (SLIIT) as an open forum for academics along with industry professionals to present the latest findings and research output. Primary objective of the ICAF is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work."), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("br", null), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            className: "callsOpen"
+        }, /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h4", null, "Registrations are open for all now"), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("h4", null, "On!!!"))), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($f71b5cdd3ef70e92b2d78850f420984d$import$56dcde213b6c1ca4$b9b876919c0450e8, {
+            sm: "1"
+        })), /*#__PURE__*/ $f71b5cdd3ef70e92b2d78850f420984d$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($f71b5cdd3ef70e92b2d78850f420984d$import$216c711ee801e331$9099ad97b570f7c, null)));
+    }
+}
+var $f71b5cdd3ef70e92b2d78850f420984d$export$9099ad97b570f7c = $f71b5cdd3ef70e92b2d78850f420984d$var$Homepage;

@@ -1,0 +1,21 @@
+import   "ab26854c530de284fd1c077d135003af:react";
+import   "ab26854c530de284fd1c077d135003af:react-router-dom";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19135830/Components/Login/ClientLogin/Login";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19136134/Components/Register/register";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19136134/Components/Register/user-type";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19136134/Components/DocumentUploads/research";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19136134/Components/DocumentUploads/workshop-presentation";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19136134/Components/Payment/payment";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19136134/Components/LandingPage/landing-page";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19136134/Components/HomePage/home-page";
+import   "ab26854c530de284fd1c077d135003af:./src/IT19136134/Components/Footer/footer-page";
+function $ab26854c530de284fd1c077d135003af$var$App() {
+    return(/*#__PURE__*/ $ab26854c530de284fd1c077d135003af$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", null, /*#__PURE__*/ $ab26854c530de284fd1c077d135003af$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($ab26854c530de284fd1c077d135003af$import$46a3a2459f86404b$23ac238d08219e97, null, /*#__PURE__*/ $ab26854c530de284fd1c077d135003af$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($ab26854c530de284fd1c077d135003af$import$46a3a2459f86404b$a0e0bdc72e03d2b1, null, /*#__PURE__*/ $ab26854c530de284fd1c077d135003af$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($ab26854c530de284fd1c077d135003af$import$46a3a2459f86404b$90dc2b712eed10fd, {
+        path: "/home-page",
+        component: $ab26854c530de284fd1c077d135003af$import$f43b5c39afbb5132$9099ad97b570f7c
+    }), /*#__PURE__*/ $ab26854c530de284fd1c077d135003af$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($ab26854c530de284fd1c077d135003af$import$46a3a2459f86404b$90dc2b712eed10fd, {
+        path: "/",
+        component: $ab26854c530de284fd1c077d135003af$import$e6790cc2b17387b6$9099ad97b570f7c
+    })))));
+}
+var $ab26854c530de284fd1c077d135003af$export$9099ad97b570f7c = $ab26854c530de284fd1c077d135003af$var$App;
